@@ -8,12 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var titleUI: UILabel!
     
     let eggTimes = ["soft":5,"medium":7, "hard":12] //dictionaries
     var counter = 0
     var timer = Timer()
     
-    @IBOutlet weak var titleUI: UILabel!
+
     @IBAction func selectedHardness(_ sender: UIButton) {
         timer.invalidate()
         let hardness = sender.currentTitle!

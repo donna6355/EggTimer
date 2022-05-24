@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -119,6 +120,18 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAM-8L-79f" userLabel="timer view">
                                         <rect key="frame" x="0.0" y="552" width="414" height="266"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PLR-HN-HRZ">
+                                                <rect key="frame" x="0.0" y="131" width="414" height="4"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PLR-HN-HRZ" firstAttribute="leading" secondItem="BAM-8L-79f" secondAttribute="leading" id="AYb-Je-FCP"/>
+                                            <constraint firstItem="PLR-HN-HRZ" firstAttribute="leading" secondItem="BAM-8L-79f" secondAttribute="leading" id="ChQ-xc-l6u"/>
+                                            <constraint firstAttribute="trailing" secondItem="PLR-HN-HRZ" secondAttribute="trailing" id="FRU-de-FMs"/>
+                                            <constraint firstAttribute="trailing" secondItem="PLR-HN-HRZ" secondAttribute="trailing" id="thw-T0-qBc"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -139,6 +152,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="progressBar" destination="PLR-HN-HRZ" id="fLO-XS-Ves"/>
                         <outlet property="titleUI" destination="bmN-4Z-iFD" id="e5e-tM-tJg"/>
                     </connections>
                 </viewController>
@@ -151,5 +165,8 @@
         <image name="hard_egg" width="287.5" height="366"/>
         <image name="medium_egg" width="288" height="363"/>
         <image name="soft_egg" width="287" height="365"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
